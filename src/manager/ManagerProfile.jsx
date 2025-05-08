@@ -48,8 +48,26 @@ export default function ManagerProfile() {
         <p><strong>Username:</strong> {manager.username}</p>
         <p><strong>Mobile No:</strong> {manager.mobileno}</p>
         <p><strong>Company Name:</strong> {manager.company_name}</p>
-        <p><strong>Comapny Location:</strong> {manager.company_location}</p>
+        
+
+X
+
+      
+      
       </div>
+
+<br>
+
+</br>
+<br>
+</br>
+<br>
+</br>
+<br>
+</br>
+<br>
+</br>
+
     </div>
   );
 }

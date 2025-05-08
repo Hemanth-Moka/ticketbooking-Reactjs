@@ -69,6 +69,14 @@ export default function BookedEvents() {
       ) : (
         <p>Loading your customer details...</p>
       )}
+            <br/>
+       <br/>
+        <br/>
+         <br/>
+          <br/>
+           <br/>
+            <br/>
+             <br/>
     </div>
   );
 }

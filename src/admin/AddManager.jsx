@@ -118,6 +118,14 @@ export default function AddManager()
         </div>
         <button type="submit">Add</button>
       </form>
+            <br/>
+       <br/>
+        <br/>
+         <br/>
+          <br/>
+           <br/>
+            <br/>
+             <br/>
     </div>
   );
 }

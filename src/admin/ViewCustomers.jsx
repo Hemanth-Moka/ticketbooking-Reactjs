@@ -5,6 +5,7 @@ import Button from '@mui/material/Button';
 import DeleteIcon from '@mui/icons-material/Delete';
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import "./Styles/ViewCustomers.css";
 
 export default function ViewCustomers() 
 {
@@ -44,62 +45,66 @@ export default function ViewCustomers()
         }
     };
 
-    return (
-        <div style={{ padding: "20px" }}>
-            <h3 style={{ textAlign: "center", color: "black", fontWeight: "bolder" }}>
-                <u>View All Customers</u>
-            </h3>
+return (
+    <div className="container">
+        <h3 className="heading">View All Customers</h3>
 
-            <ToastContainer position="top-center" autoClose={4000} />
+        <ToastContainer position="top-center" autoClose={4000} />
 
-            {error ? (
-                <p style={{ textAlign: "center", fontSize: "18px", fontWeight: "bold", color: "red" }}>
-                    {error}
-                </p>
-            ) : customers.length === 0 ? (
-                <p style={{ textAlign: "center", fontSize: "18px", fontWeight: "bold", color: "red" }}>
-                    No Customer Data Found
-                </p>
-            ) : (
-                <table style={{ width: "100%", borderCollapse: "collapse", marginTop: "20px" }}>
-                    <thead>
-                        <tr>
-                            <th>ID</th>
-                            <th>Name</th>
-                            <th>Gender</th>
-                            <th>DOB</th>
-                            <th>Email</th>
-                            <th>Username</th>
-                            <th>Mobile No</th>
-                            <th>Location</th>
-                            <th>Delete</th>
+        {error ? (
+            <p className="error-message">{error}</p>
+        ) : customers.length === 0 ? (
+            <p className="error-message">No Customer Data Found</p>
+        ) : (
+            <table className="customer-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Gender</th>
+                        <th>DOB</th>
+                        <th>Email</th>
+                        <th>Username</th>
+                        <th>Mobile No</th>
+                        <th>Location</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {customers.map((customer) => (
+                        <tr key={customer.id}>
+                            <td>{customer.id}</td>
+                            <td>{customer.name}</td>
+                            <td>{customer.gender}</td>
+                            <td>{customer.dob}</td>
+                            <td>{customer.email}</td>
+                            <td>{customer.username}</td>
+                            <td>{customer.mobileno}</td>
+                            <td>{customer.location}</td>
+                            <td>
+                                <Button
+                                    variant="outlined"
+                                    startIcon={<DeleteIcon />}
+                                    onClick={() => deleteCustomer(customer.id)}
+                                    className="delete-button"
+                                >
+                                    Delete
+                                </Button>
+                            </td>
                         </tr>
-                    </thead>
-                    <tbody>
-                        {customers.map((customer) => (
-                            <tr key={customer.id}>
-                                <td>{customer.id}</td>
-                                <td>{customer.name}</td>
-                                <td>{customer.gender}</td>
-                                <td>{customer.dob}</td>
-                                <td>{customer.email}</td>
-                                <td>{customer.username}</td>
-                                <td>{customer.mobileno}</td>
-                                <td>{customer.location}</td>
-                                <td>
-                                    <Button
-                                        variant="outlined"
-                                        startIcon={<DeleteIcon />}
-                                        onClick={() => deleteCustomer(customer.id)}
-                                    >
-                                        Delete
-                                    </Button>
-                                </td>
-                            </tr>
-                        ))}
-                    </tbody>
-                </table>
-            )}
-        </div>
-    );
+                    ))}
+                </tbody>
+            </table>
+        )}
+              <br/>
+       <br/>
+        <br/>
+         <br/>
+          <br/>
+           <br/>
+            <br/>
+             <br/>
+    </div>
+);
+
 }

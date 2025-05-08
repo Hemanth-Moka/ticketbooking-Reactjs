@@ -26,13 +26,13 @@ export default function ManagerNavBar()
         <ul className="nav-links">
           <li><Link to="/managerhome">Home</Link></li>
           <li><Link to="/managerprofile">Manager Profile</Link></li>
-          <li><Link to="/addevent">Add New Event</Link></li>
+          {/* <li><Link to="/addevent">Add New Event</Link></li> */}
 
 {/* Movies Adding Also  */}
 
-<li><Link to="/addevent">Add New Movie</Link></li>
+{/* <li><Link to="/addevent">Add New Movie</Link></li> */}
 
-          <li><Link to="/vieweventsbymanager">View Events</Link></li>
+          {/* <li><Link to="/vieweventsbymanager">View Events</Link></li> */}
           <li><Link to="/viewbookings">View Bookings</Link></li>
           <li><Link to="/managerlogin" onClick={handleLogout}>Logout</Link></li>
         </ul>

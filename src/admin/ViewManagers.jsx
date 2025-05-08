@@ -1,44 +1,35 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import config from "../config";
+import "./Styles/ViewManagers.css";
 
-export default function ViewManagers() 
-{
+export default function ViewManagers() {
     const [managers, setManagers] = useState([]);
     const [error, setError] = useState("");
-    const displayManagers = async () => 
-      {
-        try 
-        {
+
+    const displayManagers = async () => {
+        try {
             const response = await axios.get(`${config.url}/admin/viewalleventmanagers`);
             setManagers(response.data);
-        } 
-        catch (err) 
-        {
+        } catch (err) {
             setError("Failed to fetch event managers data ... " + err.message);
-        } 
+        }
     };
 
     useEffect(() => {
-      displayManagers();
+        displayManagers();
     }, []);
 
     return (
-        <div style={{ padding: "20px" }}>
-            <h3 style={{ textAlign: "center", color: "black", fontWeight: "bolder" }}>
-                <u>View All Event Managers</u>
-            </h3>
+        <div className="container">
+            <h3 className="heading">View All Event Managers</h3>
 
             {error ? (
-                <p style={{ textAlign: "center", fontSize: "18px", fontWeight: "bold", color: "red" }}>
-                    {error}
-                </p>
+                <p className="error-message">{error}</p>
             ) : managers.length === 0 ? (
-                <p style={{ textAlign: "center", fontSize: "18px", fontWeight: "bold", color: "red" }}>
-                    No Event Managers Data Found
-                </p>
+                <p className="error-message">No Event Managers Data Found</p>
             ) : (
-                <table style={{ width: "100%", borderCollapse: "collapse", marginTop: "20px" }}>
+                <table className="manager-table">
                     <thead>
                         <tr>
                             <th>ID</th>
@@ -69,6 +60,14 @@ export default function ViewManagers()
                     </tbody>
                 </table>
             )}
+                  <br/>
+       <br/>
+        <br/>
+         <br/>
+          <br/>
+           <br/>
+            <br/>
+             <br/>
         </div>
     );
 }

@@ -49,7 +49,19 @@ export default function CustomerProfile()
         <p><strong>Username:</strong> {customer.username}</p>
         <p><strong>Mobile No:</strong> {customer.mobileno}</p>
         <p><strong>Company:</strong> {customer.location}</p>
+      
+      
       </div>
+
+      <br/>
+       <br/>
+        <br/>
+         <br/>
+          <br/>
+           <br/>
+            <br/>
+             <br/>
+
     </div>
   );
 }

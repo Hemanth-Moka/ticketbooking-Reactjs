@@ -32,6 +32,7 @@ body {
 .hero-btn {
     background-color: var(--primary-color);
     color: #fff;
+     margin-right: 10px;
 }
 
 .hero-btn:hover {
@@ -230,8 +231,9 @@ cite {
     text-align: center;
     padding: 100px 80px;
     image-resolution: 1320px;
-    background: url('https://images.unsplash.com/photo-1613544013390-a73dee8d786e?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center/cover;
+    /* background: url('https://images.unsplash.com/photo-1613544013390-a73dee8d786e?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center/cover; */
     color: var(--text-color);
+    background: url('https://img.freepik.com/free-vector/gradient-abstract-wireframe-background_23-2149009903.jpg') no-repeat center center/cover;
 }
 
 .hero h2 {

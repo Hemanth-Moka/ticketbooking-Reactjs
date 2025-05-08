@@ -102,6 +102,30 @@ export default function ViewBookings() {
           </tbody>
         </table>
       )}
+      <br>
+{/* break , Not Much Data  */}
+
+</br>
+<br>
+</br>
+<br>
+</br>
+<br>
+</br>
+<br>
+</br>
+<br>
+
+</br>
+<br>
+</br>
+<br>
+</br>
+<br>
+</br>
+<br>
+</br>
     </div>
+    
   );
 }

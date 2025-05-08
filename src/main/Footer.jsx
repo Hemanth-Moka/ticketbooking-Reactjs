@@ -37,14 +37,14 @@ const Footer = () => {
       </div>
 
       {/* Bottom - Social Media & Copyright */}
-      <div className="footer-bottom">
+      {/* <div className="footer-bottom">
         <div className="social-icons">
           <a href="#"><FaFacebook /></a>
           <a href="#"><FaInstagram /></a>
           <a href="#"><FaTwitter /></a>
           <a href="#"><FaYoutube /></a>
         </div>
-        </div>
+        </div> */}
         {/* <div className="footer-bottom-text">
           <p>Follow us on social media for the latest updates!</p>
       </div> */}

@@ -1,52 +1,46 @@
+:root {
+    --primary-color: #ab12f8;
+    --primary-hover: #9e03e7;
+    --bg-dark: #0d0d0d;
+    --text-light: #ffffff;
+    --text-muted: hsla(0, 0%, 100%, 0.882);
+    --heading-color: hsla(277, 100%, 57%, 0.882);
+}
+
 /* Footer Styling */
 .footer {
-    background: #0d0d0d;
-    color: white;
-    padding: 20px 10%;
-    text-align: left;
-      /* Ensures full width */
-    max-width: 1920px;  /* Ensures it doesn't exceed 1920px */
-    position: relative;  /* Allows the footer to move with scrolling */
-    margin: 0 auto;      /* Centers the footer */
-    left: 0;
+    background: var(--bg-dark);
+    color: var(--text-light);
+    padding: 40px 10%;
+    max-width: 1920px;
+    margin: 0 auto;
+    position: relative;
 }
 
-/* Ensure body fills the screen and footer stays at the bottom */
-html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-}
-
-.main-content {
-    flex: 1;  /* Pushes footer down when content is less */
-}
-
-/* Footer Container */
+/* Flex container for sections */
 .footer-container {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    gap: 30px;
 }
 
-/* Footer Section */
+/* Each section */
 .footer-section {
-    flex: 1;
-    min-width: 250px;
-    margin: 10px;
+    flex: 1 1 250px;
+    margin: 10px 0;
 }
 
-.footer-section h2, 
+.footer-section h2,
 .footer-section h3 {
-    color:hsla(35, 18%, 87%, 0.899);
+    color: var(--heading-color);
+    margin-bottom: 10px;
 }
 
 .footer-section p {
-    font-size: 0.9rem;
-    color: #ddd;
-    margin-top: 10px;
+    font-size: 0.95rem;
+    color: var(--text-light);
+    margin: 10px 0;
 }
 
 /* Links */
@@ -60,13 +54,13 @@ html, body {
 }
 
 .footer-section ul li a {
-    color:hsl(0, 0%, 100%);
+    color: var(--text-muted);
     text-decoration: none;
     transition: color 0.3s;
 }
 
 .footer-section ul li a:hover {
-    color:hsl(0, 0%, 100%);
+    color: var(--primary-hover);
 }
 
 /* Newsletter Input */
@@ -76,181 +70,75 @@ html, body {
     border: none;
     border-radius: 5px;
     margin-top: 10px;
+    font-size: 1rem;
 }
 
 .footer-section button {
     margin-top: 10px;
     width: 100%;
     padding: 10px;
-    background: #9e03ec;
+    background: var(--primary-color);
     color: white;
     border: none;
     cursor: pointer;
-    transition: background 0.3s;
+    transition: background 0.3s, color 0.3s;
     border-radius: 5px;
 }
 
 .footer-section button:hover {
-    background: #ffffff;
+    background: white;
+    color: var(--primary-color);
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 0.85rem;
+    color: var(--text-muted);
 }
 
 /* Social Icons */
-.footer-bottom {
-    text-align: left;
-
+.social-icons {
+    margin-top: 10px;
 }
 
 .social-icons a {
     margin: 0 10px;
-    color:#9e03ec;
+    color: var(--primary-color);
     font-size: 1.5rem;
     transition: transform 0.3s, color 0.3s;
-    align-items: baseline;
-    /* align-items: last baseline; */
-}
-
-/* Ensure body fills the screen and footer stays at the bottom */
-html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-}
-
-/* Main content takes up remaining space */
-.main-content {
-    flex: 1;
-}
-
-/* Footer Styling */
-.footer {
-    background: #0d0d0d;
-    color: white;
-    padding: 20px 10%;
-    text-align: left;
-    max-width: 1920px;  /* Ensures it doesn't exceed 1920px */
-    position: absolute; /* Absolute position to make it stick to the bottom */
-    bottom: 0;          /* Sticks the footer to the bottom */
-    width: 100%;        /* Ensures it takes the full width */
-    left: 0;
-    margin: 0 auto;     /* Centers the footer */
-}
-
-/* Footer Container */
-.footer-container {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-/* Footer Section */
-.footer-section {
-    flex: 1;
-    min-width: 250px;
-    margin: 10px;
-}
-
-.footer-section h2, 
-.footer-section h3 {
-    color:hsla(35, 18%, 87%, 0.899);
-}
-
-.footer-section p {
-    font-size: 0.9rem;
-    color: #ddd;
-    margin-top: 10px;
-}
-
-/* Links */
-.footer-section ul {
-    list-style: none;
-    padding: 0;
-}
-
-.footer-section ul li {
-    margin: 8px 0;
-}
-
-.footer-section ul li a {
-    color:hsl(0, 0%, 100%);
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-.footer-section ul li a:hover {
-    color:hsl(0, 0%, 100%);
-}
-
-/* Newsletter Input */
-.footer-section input {
-    width: 100%;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    margin-top: 10px;
-}
-
-.footer-section button {
-    margin-top: 10px;
-    width: 100%;
-    padding: 10px;
-    background: #9e03ec;
-    color: white;
-    border: none;
-    cursor: pointer;
-    transition: background 0.3s;
-    border-radius: 5px;
-}
-
-.footer-section button:hover {
-    background: #ffffff;
-}
-
-/* Social Icons */
-.footer-bottom {
-    text-align: left;
-}
-
-.social-icons a {
-    margin: 0 10px;
-    color:#9e03ec;
-    font-size: 1.5rem;
-    transition: transform 0.3s, color 0.3s;
-    align-items: baseline;
 }
 
 .social-icons a:hover {
-    color: #9e03e7;
+    color: var(--primary-hover);
     transform: scale(1.1);
 }
 
-.footer-bottom-text {
-    align-items: end;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
+/* Responsive Layout */
+@media (max-width: 1024px) {
     .footer-container {
-        flex-direction: column;
-        text-align: center;
+        gap: 20px;
     }
 }
 
-
-.social-icons a:hover {
-    color: #9e03e7;
-    transform: scale(1.1);
-}
-
-.footer-bottom-text{
-    align-items: end;
-
-}
-/* Responsive */
 @media (max-width: 768px) {
+    .footer {
+        padding: 30px 5%;
+    }
+
     .footer-container {
         flex-direction: column;
         text-align: center;
+        align-items: center;
+    }
+
+    .footer-section {
+        max-width: 100%;
+    }
+
+    .footer-section input,
+    .footer-section button {
+        font-size: 1rem;
     }
 }
