@@ -22,13 +22,12 @@ export default function CustomerHome() {
         </div>
       </section>
 
-      {/* Booking Section */}
-      <section id="booking" className="booking">
+     <section id="booking" className="booking">
         <h3>Book Your Ticket</h3>
         <div className="booking-options">
-          <a href="/movies">🎬 Movies</a>
+          <a href="/viewallevents">🎬 Movies</a>
           <a href="/travel">🚗 Travel</a>
-          <a href="/events">🎟️ Events</a>
+          <a href="/viewallevents">🎟️ Events</a>
         </div>
       </section>
 

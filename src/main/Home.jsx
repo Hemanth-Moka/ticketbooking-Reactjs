@@ -20,7 +20,7 @@ const Home = () => {
           </button>
           <h2>Book Your Tickets Hassle-Free!</h2>
           <p>Movies, Events, and Travel – all in one place.<br />Easy booking, best prices, and secure payments.</p>
-          <a href="#booking" className="hero-btn">Book Now</a>
+          <a href="/customerlogin" className="hero-btn">Book Now</a>
         </div>
       </section>
 

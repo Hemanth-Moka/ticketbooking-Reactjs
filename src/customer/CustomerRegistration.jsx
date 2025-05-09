@@ -54,11 +54,7 @@ export default function CustomerRegistration() {
     <div className="customer-registration-container">
       <h3 className="customer-registration-title">Customer Registration</h3>
 
-      {message ? (
-        <p className="customer-response-message success">{message}</p>
-      ) : (
-        <p className="customer-response-message error">{error}</p>
-      )}
+    
 
       <form className="customer-registration-form" onSubmit={handleSubmit}>
         <div className="customer-form-field">
@@ -75,6 +71,7 @@ export default function CustomerRegistration() {
             <option value="other">Other</option>
           </select>
         </div>
+
 
         <div className="customer-form-field">
           <label htmlFor="dob">Date of Birth</label>
@@ -106,8 +103,19 @@ export default function CustomerRegistration() {
           <input type="text" id="location" value={formData.location} onChange={handleChange} required />
         </div>
 
+          {message ? (
+        <p className="customer-response-message success">{message}<a href="/customer/customerlogin">Login here</a></p>
+      ) : (
+        <p className="customer-response-message error">{error}</p>
+      )}
+
         <button type="submit" className="customer-submit-btn">Register</button>
       </form>
+      <div className="customer-registration-footer">
+        <p>Already have an account? <a href="/customer/login">Login here</a></p>
+        <p>By registering, you agree to our <a href="/terms">Terms of Service</a> and <a href="/privacy">Privacy Policy</a>.</p>
+      </div>
+
     </div>
   );
 }
