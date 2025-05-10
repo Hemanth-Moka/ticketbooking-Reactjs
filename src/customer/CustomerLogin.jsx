@@ -6,12 +6,13 @@ import { useAuth } from '../contextapi/AuthContext';
 import ReCAPTCHA from 'react-google-recaptcha'; // ⬅️ Importing reCAPTCHA
 import "./custstyles/CustomerLogin.css";
 
+
 export default function CustomerLogin() {
   const [formData, setFormData] = useState({
     username: '',
     password: ''
   });
-  const [message, setMessage] = useState('');
+ const [message, setMessage] = useState('');
   const [error, setError] = useState('');
   const [captchaToken, setCaptchaToken] = useState(null);
 
@@ -25,14 +26,13 @@ export default function CustomerLogin() {
 
   const handleCaptchaChange = (token) => {
     setCaptchaToken(token);
+    setError('');
   };
-
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // ⛔ CAPTCHA check
     if (!captchaToken) {
-      setError('Please verify you are not a robot.');
+      setError('Please complete the CAPTCHA.');
       return;
     }
 
@@ -86,11 +86,12 @@ export default function CustomerLogin() {
             required
           />
         </div>
-
-        <ReCAPTCHA
-          sitekey="6LeXrTQrAAAAAOA-JbPQhPPdJx7a6Xiqm9Je7xnK"
-          onChange={handleCaptchaChange}
-        />
+ <div style={{ margin: '10px 0' }}>
+          <ReCAPTCHA
+            sitekey="6Ld0EDQrAAAAACf4-ffFEKLc1duDTy5k1WkCzhsU" // Replace this with your actual reCAPTCHA site key
+            onChange={handleCaptchaChange}
+          />
+        </div>
 
         <button type="submit" className="customer-submit-btn">Login</button>
       </form>
