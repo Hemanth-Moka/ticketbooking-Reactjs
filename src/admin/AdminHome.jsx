@@ -19,7 +19,7 @@ export default function AdminHome()
           </br>
           {/* <p>ADMIN Panel<br /></p> */}
           <a href="/addeventmanager" className="hero-btn">Add Event Manager</a>
-          <a href="//viewmanagers" className="hero-btn">View Managers</a>
+          <a href="/viewmanagers" className="hero-btn">View Managers</a>
           <a href="/viewallcustomers" className="hero-btn">View All Customers</a>
         </div>
       </section>
