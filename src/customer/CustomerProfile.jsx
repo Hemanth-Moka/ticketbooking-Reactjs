@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import './Customer.css';
+import './customer.css';
 
 const DEFAULT_PROFILE_PIC = 'https://via.placeholder.com/150'; // Can be removed if not used elsewhere
 
