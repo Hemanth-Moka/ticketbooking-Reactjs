@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import config from '../config';
-import './custstyles/viewAll.css'; // Include the custom CSS
+import './custstyles/viewall.css'; // Include the custom CSS
 
 export default function ViewAllEvents() {
   const [events, setEvents] = useState([]);
