@@ -1,4 +1,5 @@
 import { useState } from 'react';
+// import './customer.css';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import config from '../config';
@@ -33,13 +34,13 @@ export default function CustomerLogin() {
         sessionStorage.setItem('customer', JSON.stringify(response.data));
         navigate('/customerhome');
       } else {
-        setMessage("Login failed. Please check your credentials.");
+        setMessage(response.data);
       }
     } catch (err) {
       if (err.response) {
-        setError(err.response.data || "Login failed. Please try again.");
+        setError(err.response.data);
       } else {
-        setError("Something went wrong. Please try again later.");
+        setError('An unexpected error occurred.');
       }
     }
   };
@@ -50,43 +51,45 @@ export default function CustomerLogin() {
       {
         message
           ? <p className="customer-response-message success">{message}</p>
-          : error && <p className="customer-response-message error">{error}</p>
+          : <p className="customer-response-message error">{error}</p>
       }
       <form className="customer-login-form" onSubmit={handleSubmit}>
         <div className="customer-form-field">
-          <label htmlFor="username">Username</label>
+          <label>Username</label>
           <input
             type="text"
             id="username"
             value={formData.username}
             onChange={handleChange}
             required
-            placeholder="Enter your username"
           />
         </div>
         <div className="customer-form-field">
-          <label htmlFor="password">Password</label>
+          <label>Password</label>
           <input
             type="password"
             id="password"
             value={formData.password}
             onChange={handleChange}
             required
-            placeholder="Enter your password"
           />
         </div>
-        <button type="submit" className="customer-submit-btn">Login</button>
 
-      <section id="booking" className="booking">
-        <h3>Book Your Ticket</h3>
-        <div className="booking-options">
-          <a href="/viewallevents">🎬 Movies</a>
-          <a href="/travel">🚗 Travel</a>
-          <a href="/viewallevents">🎟️ Events</a>
-        </div>
+           <a href="/adminlogin" className="hero-btn1">Admin</a>
+            <a href="/ManagerLogin" className="hero-btn1">Manager Login</a>
+
+        <button type="submit" className="customer-submit-btn">Login</button>
+      </form>
+
+      <section id="testimonials">
+        <h3>For Manager Registration Contact Admin</h3>
+        <blockquote>"Please reach out to the admin for registration details."</blockquote>
+        <cite>Hemanth_moka</cite>
+  <a href="https://www.linkedin.com/in/hemanthmoka" target="_blank">LinkedIn</a>
+
+
       </section>
 
-      </form>
     </div>
   );
 }

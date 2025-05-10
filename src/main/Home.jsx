@@ -15,9 +15,14 @@ const Home = () => {
       {/* Hero Section */}
       <section className="hero">
         <div className="hero-content">
-          <button className="dark-mode-btn" onClick={toggleDarkMode}>
+          {/* <button className="dark-mode-btn" onClick={toggleDarkMode}>
             {darkMode ? "Light Mode" : "Dark Mode"}
-          </button>
+          </button> */}
+           <a href="/customerlogin" className="hero-btn">Login</a>
+            <a href="/customerRegistration" className="hero-btn">Register Now</a>
+            <br />
+            <br />
+
           <h2>Book Your Tickets Hassle-Free!</h2>
           <p>Movies, Events, and Travel – all in one place.<br />Easy booking, best prices, and secure payments.</p>
           <a href="/customerlogin" className="hero-btn">Book Now</a>

@@ -63,7 +63,7 @@
 
 /* Submit Button */
 .customer-submit-btn {
-  background-color: #4CAF50;
+  background-color: #5120f1;
   color: white;
   padding: 12px 20px;
   font-size: 16px;
@@ -76,7 +76,7 @@
 }
 
 .customer-submit-btn:hover {
-  background-color: #2980b9;
+  background-color: #9000ff85;
 }
 
 /* Response Message */
@@ -88,7 +88,7 @@
 }
 
 .customer-response-message.success {
-  color: green;
+  color: rgba(107, 1, 255, 0.789);
 }
 
 .customer-response-message.error {
