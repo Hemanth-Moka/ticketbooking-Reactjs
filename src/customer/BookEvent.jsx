@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import config from '../config';
+import './customer.css';
 
-export default function BookEvent() 
-{
+export default function BookEvent() {
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -62,24 +62,49 @@ export default function BookEvent()
   };
 
   return (
-    <div style={{ padding: '20px' }}>
-      <h3 style={{ textAlign: 'center' }}>Book Event</h3>
-      <form onSubmit={handleSubmit} style={{ maxWidth: '500px', margin: 'auto' }}>
-        <div>
+    <div className="unique-booking-container">
+      <h3 className="unique-booking-title">Book Event</h3>
+      <form onSubmit={handleSubmit} className="unique-booking-form">
+        <div className="unique-form-group">
           <label>Start Date: </label>
-          <input type="date" name="startdate" value={formData.startdate} onChange={handleChange} required />
+          <input
+            type="date"
+            name="startdate"
+            value={formData.startdate}
+            onChange={handleChange}
+            className="unique-booking-input"
+            required
+          />
         </div>
-        <div>
+        <div className="unique-form-group">
           <label>End Date: </label>
-          <input type="date" name="enddate" value={formData.enddate} onChange={handleChange} required />
+          <input
+            type="date"
+            name="enddate"
+            value={formData.enddate}
+            onChange={handleChange}
+            className="unique-booking-input"
+            required
+          />
         </div>
-        <div>
+        <div className="unique-form-group">
           <label>Capacity: </label>
-          <input type="number" name="bookedcapacity" min="1" value={formData.bookedcapacity} onChange={handleChange} required />
+          <input
+            type="number"
+            name="bookedcapacity"
+            min="1"
+            value={formData.bookedcapacity}
+            onChange={handleChange}
+            className="unique-booking-input"
+            required
+          />
         </div>
-        <div style={{ marginTop: '20px', textAlign: 'center' }}>
-          <button type="submit">Confirm Booking</button>
-        </div>
+<div className="unique-submit-container">
+  <a href="https://payments-test.cashfree.com/links?code=U8hj8m139t9g" target="_blank" rel="noopener noreferrer">
+    <button type="button" className="unique-booking-submit-btn">Confirm Booking</button>
+  </a>
+</div>
+
       </form>
     </div>
   );

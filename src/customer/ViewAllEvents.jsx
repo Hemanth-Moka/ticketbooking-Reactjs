@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import config from '../config';
-import './customer.css'; // Include the custom CSS
+import './custstyles/ViewAll.css'; // Include the custom CSS
 
 export default function ViewAllEvents() {
   const [events, setEvents] = useState([]);
@@ -60,9 +60,9 @@ export default function ViewAllEvents() {
   });
 
   return (
-    <div className="event-container">
-      <h3 className="event-heading">Available Events</h3>
-      <table className="event-table">
+    <div className="unique-event-container">
+      <h3 className="unique-event-heading">Available Events</h3>
+      <table className="unique-event-table">
         <thead>
           <tr>
             <th>Event ID</th>
@@ -76,14 +76,14 @@ export default function ViewAllEvents() {
             <th>Action</th>
           </tr>
           <tr>
-            <th><input type="text" placeholder="Search..." onChange={e => handleSearchChange(e, 'id')} /></th>
-            <th><input type="text" placeholder="Search..." onChange={e => handleSearchChange(e, 'manager')} /></th>
-            <th><input type="text" placeholder="Search..." onChange={e => handleSearchChange(e, 'company')} /></th>
-            <th><input type="text" placeholder="Search..." onChange={e => handleSearchChange(e, 'category')} /></th>
-            <th><input type="text" placeholder="Search..." onChange={e => handleSearchChange(e, 'title')} /></th>
-            <th><input type="text" placeholder="Search..." onChange={e => handleSearchChange(e, 'description')} /></th>
-            <th><input type="text" placeholder="Search..." onChange={e => handleSearchChange(e, 'capacity')} /></th>
-            <th><input type="text" placeholder="Search..." onChange={e => handleSearchChange(e, 'cost')} /></th>
+            <th><input className="unique-search-input" type="text" placeholder="Search..." onChange={e => handleSearchChange(e, 'id')} /></th>
+            <th><input className="unique-search-input" type="text" placeholder="Search..." onChange={e => handleSearchChange(e, 'manager')} /></th>
+            <th><input className="unique-search-input" type="text" placeholder="Search..." onChange={e => handleSearchChange(e, 'company')} /></th>
+            <th><input className="unique-search-input" type="text" placeholder="Search..." onChange={e => handleSearchChange(e, 'category')} /></th>
+            <th><input className="unique-search-input" type="text" placeholder="Search..." onChange={e => handleSearchChange(e, 'title')} /></th>
+            <th><input className="unique-search-input" type="text" placeholder="Search..." onChange={e => handleSearchChange(e, 'description')} /></th>
+            <th><input className="unique-search-input" type="text" placeholder="Search..." onChange={e => handleSearchChange(e, 'capacity')} /></th>
+            <th><input className="unique-search-input" type="text" placeholder="Search..." onChange={e => handleSearchChange(e, 'cost')} /></th>
             <th></th>
           </tr>
         </thead>
@@ -100,28 +100,18 @@ export default function ViewAllEvents() {
                 <td>{event.capacity}</td>
                 <td>{event.cost}</td>
                 <td>
-                  <button className="book-button" onClick={() => handleBookClick(event.id)}>Book</button>
+                  <button className="unique-book-button" onClick={() => handleBookClick(event.id)}>Book</button>
                 </td>
               </tr>
             ))
           ) : (
             <tr>
-              <td colSpan="9">No matching events found.</td>
+              <td className="unique-no-events-message" colSpan="9">No matching events found.</td>
             </tr>
           )}
         </tbody>
       </table>
-            <br/>
-       <br/>
-        <br/>
-         <br/>
-          <br/>
-           <br/>
-            <br/>
-             <br/>
-                         <br/>
-             <br/>
-
+      <div className="unique-event-container-spacing"></div>
     </div>
   );
 }

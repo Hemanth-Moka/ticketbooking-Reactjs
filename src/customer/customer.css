@@ -1,0 +1,333 @@
+/* ======= GLOBAL FORM STYLES ======= */
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 10px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  transition: border-color 0.3s;
+}
+
+input:focus,
+select:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* ======= BUTTON STYLES ======= */
+
+.btn-submit {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 25px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display: inline-block;
+}
+
+.btn-submit:hover {
+  background-color: #0056b3;
+}
+
+/* ======= UPDATE FORM ======= */
+
+.update-container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: #f8f9fa;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.form-title {
+  text-align: center;
+  font-size: 24px;
+  color: #007bff;
+  margin-bottom: 20px;
+  text-decoration: underline;
+}
+
+.form-message {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.success {
+  color: #155724;
+  background-color: #d4edda;
+}
+
+/* .error {
+  color: #721c24;
+  background-color: #f8d7da; */
+
+
+/* ======= BOOK EVENT FORM ======= */
+
+.book-event-container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
+}
+
+.book-event-title {
+  text-align: center;
+  font-size: 24px;
+  color: #007bff;
+  margin-bottom: 20px;
+}
+
+.book-event-form .form-group {
+  margin-bottom: 20px;
+}
+
+.form-actions {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* ======= PROFILE SECTION ======= */
+
+.profile-container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
+}
+
+.profile-title {
+  text-align: center;
+  font-size: 26px;
+  color: #007bff;
+  margin-bottom: 25px;
+  text-decoration: underline;
+}
+
+.profile-card {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.profile-info {
+  font-size: 16px;
+  padding: 12px;
+  background-color: #f5f5f5;
+  border-left: 4px solid #007bff;
+  border-radius: 6px;
+  margin: 0;
+}
+
+.profile-label {
+  font-weight: 600;
+  color: #333;
+}
+
+/* ======= LOADING SPINNER ======= */
+
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+  font-family: Arial, sans-serif;
+}
+
+.loading-text {
+  margin-top: 15px;
+  font-size: 18px;
+  color: #555;
+}
+
+.loading-spinner {
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #007bff;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ======= RESPONSIVE DESIGN ======= */
+
+@media (max-width: 600px) {
+  .update-container,
+  .book-event-container,
+  .profile-container {
+    margin: 20px;
+    padding: 20px;
+  }
+
+  .btn-submit {
+    width: 100%;
+    padding: 12px;
+  }
+}
+/* === BOOK EVENT STYLING === */
+.book-event-wrapper {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 35px 30px;
+  background: linear-gradient(to right, #6f00ff, #a666ff);
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  animation: fadeIn 0.6s ease;
+}
+
+.book-event-heading {
+  font-size: 26px;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #fff;
+  font-weight: bold;
+}
+
+.book-event-form .form-group {
+  margin-bottom: 20px;
+}
+
+.book-event-form label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #fff;
+}
+
+.book-event-form input {
+  width: 100%;
+  padding: 10px;
+  font-size: 15px;
+  border: none;
+  border-radius: 6px;
+  background-color: #f2f2f2;
+  color: #333;
+}
+
+.book-event-form input:focus {
+  outline: none;
+  border: 2px solid #fff;
+}
+
+/* === BUTTON STYLING === */
+.btn-submit {
+  width: 100%;
+  background-color: #ffffff;
+  color: #6f00ff;
+  padding: 12px;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: background 0.3s ease, transform 0.2s;
+  cursor: pointer;
+}
+
+.btn-submit:hover {
+  background-color: #f1f1f1;
+  transform: scale(1.02);
+}
+
+/* === FADE ANIMATION === */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* customer.css */
+
+.booked-events-container {
+  padding: 20px;
+}
+
+.booked-events-title {
+  text-align: center;
+  text-decoration: underline;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.booked-events-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden; /* To contain the border-radius of thead/tbody */
+}
+
+.booked-events-thead {
+  background-color: #f8f9fa;
+  color: #495057;
+}
+
+.booked-events-thead th {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 2px solid #dee2e6;
+}
+
+.booked-events-tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.booked-events-tbody td {
+  padding: 10px;
+  text-align: center;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.booked-events-tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.no-events {
+  padding: 15px;
+  text-align: center;
+  font-style: italic;
+  color: #6c757d;
+}
+
+.loading-message {
+  padding: 15px;
+  text-align: center;
+  color: #007bff;
+}
+

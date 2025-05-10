@@ -67,7 +67,7 @@ return (
                         <th>Username</th>
                         <th>Mobile No</th>
                         <th>Location</th>
-                        <th>Delete</th>
+                        {/* <th>Delete</th> */}
                     </tr>
                 </thead>
                 <tbody>
@@ -82,14 +82,14 @@ return (
                             <td>{customer.mobileno}</td>
                             <td>{customer.location}</td>
                             <td>
-                                <Button
+                                {/* <Button
                                     variant="outlined"
                                     startIcon={<DeleteIcon />}
                                     onClick={() => deleteCustomer(customer.id)}
                                     className="delete-button"
                                 >
                                     Delete
-                                </Button>
+                                </Button> */}
                             </td>
                         </tr>
                     ))}

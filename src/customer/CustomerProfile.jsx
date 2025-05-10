@@ -1,67 +1,59 @@
 import { useState, useEffect } from 'react';
+import './Customer.css';
 
-export default function CustomerProfile() 
-{
-  const [customer, setCustomer] = useState("");
-     
+const DEFAULT_PROFILE_PIC = 'https://via.placeholder.com/150'; // Can be removed if not used elsewhere
+
+export default function CustomerProfile() {
+  const [customer, setCustomer] = useState(null);
+
   useEffect(() => {
     const storedCustomer = sessionStorage.getItem('customer');
     if (storedCustomer) {
-     setCustomer(JSON.parse(storedCustomer));
+      setCustomer(JSON.parse(storedCustomer));
+    } else {
+      console.warn('Customer data not found in sessionStorage.');
     }
   }, []);
 
   if (!customer) {
     return (
-      <div style={{ textAlign: 'center', marginTop: '50px' }}>
-        Loading profile...
+      <div className="loading-container">
+        <div className="loading-spinner"></div>
+        <p className="loading-text">Loading customer profile...</p>
       </div>
     );
   }
 
+  const {
+    name,
+    gender,
+    dob,
+    email,
+    username,
+    mobileno,
+    location,
+  } = customer;
+
   return (
-    <div
-      style={{
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        marginTop: '20px',
-        fontFamily: 'Arial, sans-serif',
-      }}
-    >
-      <h2 style={{ fontSize: '26px', color: '#333', marginBottom: '20px' }}>
-        Customer Profile
-      </h2>
-
-      <div
-        style={{
-          backgroundColor: 'light grey',
-          border: '1px solid black',
-          borderRadius: '10px',
-          padding: '20px',
-          width: '350px',
-        }}
-      >
-        <p><strong>Name:</strong> {customer.name}</p>
-        <p><strong>Gender:</strong> {customer.gender}</p>
-        <p><strong>Date of Birth:</strong> {customer.dob}</p>
-        <p><strong>Email:</strong> {customer.email}</p>
-        <p><strong>Username:</strong> {customer.username}</p>
-        <p><strong>Mobile No:</strong> {customer.mobileno}</p>
-        <p><strong>Company:</strong> {customer.location}</p>
-      
-      
+    <div className="profile-container">
+      <h2 className="profile-title">Customer Profile</h2>
+      <div className="profile-card">
+        <ProfileInfo label="Name" value={name} />
+        <ProfileInfo label="Gender" value={gender} />
+        <ProfileInfo label="Date of Birth" value={dob} />
+        <ProfileInfo label="Email" value={email} />
+        <ProfileInfo label="Username" value={username} />
+        <ProfileInfo label="Mobile No" value={mobileno} />
+        <ProfileInfo label="Company" value={location} />
       </div>
-
-      <br/>
-       <br/>
-        <br/>
-         <br/>
-          <br/>
-           <br/>
-            <br/>
-             <br/>
-
     </div>
+  );
+}
+
+function ProfileInfo({ label, value }) {
+  return (
+    <p className="profile-info">
+      <strong className="profile-label">{label}:</strong> {value}
+    </p>
   );
 }

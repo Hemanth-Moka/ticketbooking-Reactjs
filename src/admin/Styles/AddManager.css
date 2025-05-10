@@ -1,0 +1,69 @@
+/* unique-manager-form-container */
+.unique-manager-form-container {
+  padding: 20px;
+  max-width: 600px; /* You can adjust the width as needed */
+   margin: auto;
+ /* background-color: #f9f9f9; */
+}
+
+/* unique-manager-form-title */
+.unique-manager-form-title {
+  text-align: center;
+  text-decoration: underline;
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #6a1b9a; /* Purple color */
+}
+
+/* unique-form-group */
+.unique-form-group {
+  margin-bottom: 15px;
+}
+
+/* unique-form-label */
+.unique-form-label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #6a1b9a; /* Purple color */
+}
+
+/* unique-form-input */
+.unique-form-input {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* unique-submit-btn */
+.unique-submit-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #8e24aa; /* Purple background */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.unique-submit-btn:hover {
+  background-color: #7b1fa2; /* Darker purple on hover */
+}
+
+/* unique-success-message */
+.unique-success-message {
+  text-align: center;
+  color: #4caf50; /* Green success color */
+  font-weight: bolder;
+}
+
+/* unique-error-message */
+.unique-error-message {
+  text-align: center;
+  color: #e53935; /* Red error color */
+  font-weight: bolder;
+}

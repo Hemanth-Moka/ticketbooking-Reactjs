@@ -1,0 +1,111 @@
+/* customer.css */
+
+/* Container for the event list */
+.unique-event-container {
+  padding: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading for the event list */
+.unique-event-heading {
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+/* Table styling */
+.unique-event-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 30px;
+}
+
+.unique-event-table th,
+.unique-event-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.unique-event-table th {
+  background-color: #f2f2f2;
+  font-size: 16px;
+  color: #333;
+}
+
+.unique-event-table td {
+  font-size: 14px;
+  color: #555;
+}
+
+/* Search input fields */
+.unique-search-input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+/* Book button styling */
+.unique-book-button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover effect for the book button */
+.unique-book-button:hover {
+  background-color: #45a049;
+}
+
+/* Handling no results message */
+.unique-no-events-message {
+  text-align: center;
+  font-size: 16px;
+  color: #777;
+}
+
+/* Styling for large spacing in the container */
+.unique-event-container-spacing {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .unique-event-container {
+    padding: 15px;
+  }
+
+  .unique-event-heading {
+    font-size: 22px;
+  }
+
+  .unique-event-table th,
+  .unique-event-table td {
+    font-size: 12px;
+    padding: 10px;
+  }
+
+  .unique-search-input {
+    font-size: 12px;
+  }
+
+  .unique-book-button {
+    padding: 8px 15px;
+    font-size: 12px;
+  }
+}

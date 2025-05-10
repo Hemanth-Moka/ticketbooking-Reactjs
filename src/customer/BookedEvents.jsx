@@ -31,6 +31,9 @@ export default function BookedEvents() {
       <h3 style={{ textAlign: 'center', textDecoration: 'underline' }}>Your Booked Events</h3>
       {customer ? (
         <div>
+          
+          <br />
+          <br />
           <table style={{ width: '100%', textAlign: 'center', marginBottom: '30px' }}>
             <thead style={{ backgroundColor: '#f2f2f2' }}>
               <tr>

@@ -87,8 +87,18 @@ return (
         />
       </div>
 
+      
       <button type="submit" className="admin-submit-btn">Login</button>
+
     </form>
+
+
+      <section id="testimonials">
+        <h3>What Our Customers Say</h3>
+        <blockquote>"This platform is amazing! Booking tickets is so easy!"</blockquote>
+        <cite>-Balaji  </cite>
+      </section>
+
   </div>
 );
 
