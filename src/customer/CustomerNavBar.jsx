@@ -1,5 +1,5 @@
 import { Routes, Route, Link } from 'react-router-dom';
-import './customer.css';
+import './Customer.css';
 import CustomerHome from './CustomerHome';
 import CustomerProfile from './CustomerProfile';
 import CustomerLogin from './CustomerLogin';
