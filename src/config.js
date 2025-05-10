@@ -1,6 +1,6 @@
 const config = 
 {
-    "url":"http://localhost:2525"
+    "url":"http://ticket-booking-b-production.up.railway.app"
 }
 
 export default config
