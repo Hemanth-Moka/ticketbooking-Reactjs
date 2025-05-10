@@ -1,9 +1,9 @@
 import { useState } from 'react';
-// import './customer.css';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import config from '../config';
 import { useAuth } from '../contextapi/AuthContext';
+import ReCAPTCHA from 'react-google-recaptcha'; // ⬅️ Importing reCAPTCHA
 import "./custstyles/CustomerLogin.css";
 
 export default function CustomerLogin() {
@@ -23,8 +23,18 @@ export default function CustomerLogin() {
     setFormData({ ...formData, [id]: value });
   };
 
+  const handleCaptchaChange = (token) => {
+    setCaptchaToken(token);
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    // ⛔ CAPTCHA check
+    if (!captchaToken) {
+      setError('Please verify you are not a robot.');
+      return;
+    }
 
     try {
       const response = await axios.post(`${config.url}/customer/checkcustomerlogin`, formData);
@@ -48,11 +58,13 @@ export default function CustomerLogin() {
   return (
     <div className="customer-login-container">
       <h3 className="customer-login-title">Customer Login</h3>
-      {
-        message
-          ? <p className="customer-response-message success">{message}</p>
-          : <p className="customer-response-message error">{error}</p>
-      }
+
+      {message ? (
+        <p className="customer-response-message success">{message}</p>
+      ) : (
+        <p className="customer-response-message error">{error}</p>
+      )}
+
       <form className="customer-login-form" onSubmit={handleSubmit}>
         <div className="customer-form-field">
           <label>Username</label>
@@ -75,21 +87,27 @@ export default function CustomerLogin() {
           />
         </div>
 
-           <a href="/adminlogin" className="hero-btn1">Admin</a>
-            <a href="/ManagerLogin" className="hero-btn1">Manager Login</a>
+        <ReCAPTCHA
+          sitekey="6LeXrTQrAAAAAOA-JbPQhPPdJx7a6Xiqm9Je7xnK"
+          onChange={handleCaptchaChange}
+        />
 
         <button type="submit" className="customer-submit-btn">Login</button>
       </form>
+
+      <div className="customer-links">
+        <a href="/adminlogin" className="hero-btn1">Admin</a>
+        <a href="/ManagerLogin" className="hero-btn1">Manager Login</a>
+        <a href="/CustomerLogin" className="hero-btn1">Customer Login</a>
+      </div>
 
       <section id="testimonials">
         <h3>For Manager Registration Contact Admin</h3>
         <blockquote>"Please reach out to the admin for registration details."</blockquote>
         <cite>Hemanth_moka</cite>
-  <a href="https://www.linkedin.com/in/hemanthmoka" target="_blank">LinkedIn</a>
-
-
+        <br />
+        <a href="https://www.linkedin.com/in/hemanthmoka" target="_blank" rel="noopener noreferrer">LinkedIn</a>
       </section>
-
     </div>
   );
 }
